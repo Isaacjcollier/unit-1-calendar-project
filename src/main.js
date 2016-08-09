@@ -1,9 +1,6 @@
-$(document).on('ready', function () {
+$(document).ready(function() {
   console.log('sanity check');
 
-  $.ajax({
-    method: 'GET',
-  })
+  $('#calendar').fullCalendar();
 
-
-})
+});
