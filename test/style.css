@@ -1,0 +1,13 @@
+#bg {
+  background-color: #121979;
+}
+
+.navbar {
+  background-image: none;
+  border-bottom: 1px solid #121979;
+}
+
+/*.navbar-default .navbar-nav>li>a:hover,
+ .navbar-default .navbar-nav>li>a:focus {
+  background-color: #290;
+}*/
