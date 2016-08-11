@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Stay Composed Calander</title>
+    <title>Stay Composed</title>
 
     <!-- bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="style.css">
 
   </head>
-  <body class="background-img">
 
+<!-- Body -->
+  <body class="background-img">
     <!-- Header  -->
     <div class="navbar navbar-default navbar-fixed-top" id="bg">
       <div class="container" >
@@ -45,8 +46,7 @@
                 <!-- Adding a Task -->
                 <div class="form-group">
                   <label for="task-name" class=" control-label">Name for task</label>
-                  <br>
-                    <input type="text" class="form-control" id="task-name" placeholder="example: Call Landlord">
+                  <input type="text" class="form-control" id="task-name" placeholder="example: Call Landlord">
                 </div>
 
                 <!-- Adding a Description -->
@@ -74,9 +74,25 @@
                       <option>Late Evening (7:00 - 9:00 PM)</option>
                       <option>Night (9:00 PM - 5:00 AM)</option>
                     </select>
-                    <br>
                   </div>
                 </div>
+
+                <!-- Rating Difficulty -->
+                <div class="form-group">
+                  <label for="task-difficulty" class="control-label">Rate Difficutly</label>
+                  <div>
+                    <select class="form-control" id="task-difficulty">
+                      <option selected disabled="">Select Task Difficulty</option>
+                      <option>1 - Very Easy</option>
+                      <option>2 - Easy</option>
+                      <option>3 - Moderate</option>
+                      <option>4 - Hard</option>
+                      <option>5 - Very Hard</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Submit & Clear Buttons -->
                 <div class="form-group">
                   <div style="text-align: center">
                     <button type="reset" class="btn btn-default btn-warning">Clear Form</button>
@@ -104,7 +120,8 @@
     <div class="modal fade" id="task-info">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-body" style="background-color:#627979">
+          <div class="modal-body">
+            <!-- displaying the data in a model -->
             <form class="form-horizontal" style="background-color: white; padding:25px; border: 1px solid black; border-radius: 3%" id="the-form">
             <h4>Task Name</h4>
             <div class="task-name"></div>
@@ -114,9 +131,12 @@
             <br>
             <h4>Time To Complete</h4>
             <div class="task-timeFrame"></div>
+            <br>
+            <h4>Difficulty of Task</h4>
+            <div class="task-difficulty"></div>
           </div>
-          <!-- <div class="container" id="box-holder">
-          </div> -->
+
+          <!-- modal footer -->
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
