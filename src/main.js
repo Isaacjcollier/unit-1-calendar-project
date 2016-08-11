@@ -21,12 +21,14 @@ $(document).ready(function() {
       $('.task-name').empty()
       $('.task-description').empty()
       $('.task-timeFrame').empty()
+      $('.task-difficulty').empty()
       // Display Modal
       $('#task-info').modal('show');
       // Append all the information from the task into the modal frame
       $('.task-name').append('<h6 style="color:black">' + event.title + '</h6>')
       $('.task-description').append('<h6 style="color:black">' + event.titleDescription + '</h6>')
       $('.task-timeFrame').append('<h6 style="color:black">' + event.titleTime + '</h6>')
+      $('.task-difficulty').append('<h6 style="color:black">' + event.titleDifficulty + '</h6>')
     },
     // when selecting an empty date, prompts the modal form
 		select: function(start, end) {
@@ -39,17 +41,20 @@ $(document).ready(function() {
         var title = $('#task-name').val();
         var titleDescription = $('#task-description').val();
         var titleTime = $('#time-frame').val()
-        var dateData = `${start.year()}-${start.month() + 1}-${start.date()}`;
-        // the event must have a title
+        var titleDifficulty = $('#task-difficulty').val()
+
+        // once the event form has a title (establish this object)
 			  if (title) {
   				eventData = {
   					title: title,
             titleDescription: titleDescription,
             titleTime: titleTime,
+            titleDifficulty: titleDifficulty,
   					start: start,
   					end: end
   				};
   				$('#calendar').fullCalendar('renderEvent', eventData, true);
+          // return the modal to be hidden
           $('#task-modal').modal('hide')
         }
       })
