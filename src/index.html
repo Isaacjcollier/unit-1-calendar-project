@@ -16,7 +16,6 @@
   </head>
   <body class="background-img">
 
-
     <!-- Header  -->
     <div class="navbar navbar-default navbar-fixed-top" id="bg">
       <div class="container" >
@@ -34,12 +33,10 @@
       </div>
     </div>
 
-    <!-- The Main Section -->
-
+    <!-- Creating the Modal -->
     <div class="modal fade" id="task-modal">
       <div class="modal-dialog">
         <div class="modal-content">
-
           <div class="modal-body">
             <form class="form-horizontal" style="background-color: white; padding:25px; border: 1px solid black; border-radius: 3%" id="the-form">
               <fieldset>
@@ -69,37 +66,17 @@
                   <div>
                     <select class="form-control" id="time-frame">
                       <option selected disabled="">Please Select a time</option>
-                      <option disabled="">:::Morning:::</option>
                       <option>Early Morning (5:00 - 10:00 AM)</option>
                       <option>Late Morning (10:00 AM - 12:00 PM)</option>
-                      <option disabled="">:::Afternoon:::</option>
                       <option>Early Afternoon (12:00 - 4:00 PM)</option>
                       <option>Late Afternoon (4:00 - 5:00 PM)</option>
-                      <option disabled="">:::Evening:::</option>
                       <option>Early Evening (5:00 - 7:00 PM)</option>
                       <option>Late Evening (7:00 - 9:00 PM)</option>
-                      <option disabled="">:::Night:::</option>
                       <option>Night (9:00 PM - 5:00 AM)</option>
                     </select>
                     <br>
                   </div>
                 </div>
-
-                <!-- Checking Priority -->
-                <!-- <div class="form-group">
-                  <label class="control-label">Priority</label>
-                  <div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        This is the top priority for this day
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <br> -->
-
-                <!-- Submit and Clear Buttons -->
                 <div class="form-group">
                   <div style="text-align: center">
                     <button type="reset" class="btn btn-default btn-warning">Clear Form</button>
@@ -109,17 +86,12 @@
               </fieldset>
             </form>
           </div>
-
         </div>
       </div>
     </div>
-    <div class="container col-md-12" style="margin-top: 70px; margin-bottom: 50px;">
-
-      <!-- the form -->
-
 
       <!-- the calendar -->
-      <!-- add background transparant darker color -->
+    <div class="container col-md-12" style="margin-top: 70px; margin-bottom: 50px;">
       <div class="row col-md-8 col-md-offset-2">
         <div class="row">
           <div id="calendar">
@@ -127,6 +99,9 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="container" id="box-holder">
+    </div> -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

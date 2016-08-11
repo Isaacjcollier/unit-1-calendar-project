@@ -1,7 +1,8 @@
 $(document).ready(function() {
   console.log('sanity check');
-
+  // calling the fullCalendar plugIn
 	$('#calendar').fullCalendar({
+      // API call from googleCalendar to populate the fullCalendar plug-in with dates(holidays)
     googleCalendarApiKey: 'AIzaSyDP1URPeSsp4BEcLUTg5SRMuK4vXDtKTmI',
     eventSources: [{
         googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com'
@@ -14,17 +15,15 @@ $(document).ready(function() {
 		selectable: true,
 		selectHelper: true,
     eventClick : function (event, jsEvent, view) {
-      console.log(event.title);
-      console.log(event.titleDescription);
-      console.log(event.titleTime);
+      // console.log(event.title);
+      // console.log(event.titleDescription);
+      // console.log(event.titleTime);
+      // $('#box-holder').append("<h1>" + event.title + "</h1>")
     },
 		select: function(start, end) {
-      // console.log(this);
       $('#the-form').css('visibility', 'visible')
 			$('#task-modal').modal('show');
 			var eventData;
-
-
 
       $('#task-modal form').one('submit', function(e) {
         e.preventDefault();
@@ -47,37 +46,10 @@ $(document).ready(function() {
   				$('#calendar').fullCalendar('renderEvent', eventData, true);
           $('#task-modal').modal('hide')
         }
-        // console.log($('[data-date="' + dateData + '"]').children())
       })
 			$('#calendar').fullCalendar('unselect');
 		},
 		editable: true,
 		eventLimit: true, // allow "more" link when too many events
 	});
-
-
-  // $('form').on('submit', function (event) {
-  //   event.preventDefault()
-  //
-  //   let taskName = $('#task-name').val()
-  //   let taskDescription = $('#task-description').val()
-  //   let timeFrame = $('#time-frame').val()
-  //   // need to access the priority checkbox
-  //
-  //   console.log(taskName);
-  //   console.log(taskDescription);
-  //   console.log(timeFrame);
-  //
-  //   $($('[data-date="2016-08-09"]')[0]).append(taskName)
-  // })
-
 });
-// $(document).ready(function() {
-//   console.log($('#calendar'), $('#calendar').fullCalendar);
-//     $('#calendar').fullCalendar({
-//         googleCalendarApiKey: 'AIzaSyC8ideWt-GrCpNSt-AYa-ck0SQYDhdIAR8',
-//         eventSources: [{
-//             googleCalendarId: 'isaacjcollier@gmail.com'
-//         }]
-//     });
-// });
