@@ -1,22 +1,6 @@
 $(document).ready(function() {
   console.log('sanity check');
 
-  // $('#calendar').fullCalendar();
-  //  googleCalendarApiKey: 'AIzaSyC8ideWt-GrCpNSt-AYa-ck0SQYDhdIAR8',
-  //  eventSources: [{
-  //      googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com'
-  //   }],
-  // $('#calendar').fullCalendar({
-  //
-  // });
-
-
-  $($('#calendar').fullCalendar.select).on('click', function () {
-    console.log(this);
-  })
-
-
-
 	$('#calendar').fullCalendar({
     googleCalendarApiKey: 'AIzaSyDP1URPeSsp4BEcLUTg5SRMuK4vXDtKTmI',
     eventSources: [{
@@ -29,6 +13,11 @@ $(document).ready(function() {
 		},
 		selectable: true,
 		selectHelper: true,
+    eventClick : function (event, jsEvent, view) {
+      console.log(event.title);
+      console.log(event.titleDescription);
+      console.log(event.titleTime);
+    },
 		select: function(start, end) {
       // console.log(this);
       $('#the-form').css('visibility', 'visible')
@@ -50,13 +39,15 @@ $(document).ready(function() {
 			  if (title) {
   				eventData = {
   					title: title,
+            titleDescription: titleDescription,
+            titleTime: titleTime,
   					start: start,
   					end: end
   				};
   				$('#calendar').fullCalendar('renderEvent', eventData, true);
           $('#task-modal').modal('hide')
         }
-        console.log($('[data-date="' + dateData + '"]').children())
+        // console.log($('[data-date="' + dateData + '"]').children())
       })
 			$('#calendar').fullCalendar('unselect');
 		},
@@ -79,10 +70,6 @@ $(document).ready(function() {
   //
   //   $($('[data-date="2016-08-09"]')[0]).append(taskName)
   // })
-  $.ajax({
-    method: "GET",
-
-  })
 
 });
 // $(document).ready(function() {
