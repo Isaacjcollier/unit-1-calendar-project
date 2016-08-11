@@ -17,9 +17,10 @@
       ├── main.js
       └── style.css
 ```
-1. You have a .got repo with the project
+1. You have a .git repo with the project
 
 ## Initial Push
+
 
 1. `git add -A`
 2. `git commit -m "inti"`
