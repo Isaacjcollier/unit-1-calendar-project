@@ -40,7 +40,7 @@ $(document).ready(function() {
         var titleDescription = $('#task-description').val();
         var titleTime = $('#time-frame').val()
         var dateData = `${start.year()}-${start.month() + 1}-${start.date()}`;
-
+        // the event must have a title
 			  if (title) {
   				eventData = {
   					title: title,
