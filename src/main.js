@@ -4,7 +4,7 @@ $(document).ready(function() {
   // calling the fullCalendar plugIn
 	$('#calendar').fullCalendar({
       // API call from googleCalendar to populate the fullCalendar plug-in with dates(holidays)
-    googleCalendarApiKey: 'AIzaSyDP1URPeSsp4BEcLUTg5SRMuK4vXDtKTmI',
+    googleCalendarApiKey: 'AIzaSyC94yUe5dp7zkT9PtlQMUHgIli3DuQaack',
     eventSources: [{
         googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com'
     }],
