@@ -1,4 +1,4 @@
-# Unit 1 Galvanize Project
+# Composed Calendar
 
 [Here is the Deployed Website](https://isaacjcollier.github.io/unit-1-calendar-project/)
 
