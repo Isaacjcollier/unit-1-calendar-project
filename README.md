@@ -1,39 +1,11 @@
-# unit-1-calander-project
+# Unit 1 Galvanize Project
 
-# Host on github pages
+[Here is the Deployed Website](https://isaacjcollier.github.io/unit-1-calendar-project/)
 
-## Assumptions
+## What is Composed Calendar?
 
-1. Your project directory looks like this (because you are a good citizen and ran 'yo galvanize-html'):
-```
-  ├── README.md
-  ├── gulpfile.js
-  ├── package.json
-  └── src
-      ├── about.html
-      ├── images
-      │   └── background.jpeg
-      ├── index.html
-      ├── main.js
-      └── style.css
-```
-1. You have a .git repo with the project
+###### This project was designed during the first Unit of Gschool, and to make tasks throughout the day fun and rewarding to do.
 
-## Initial Push
+## How does it work?
 
-
-1. `git add -A`
-2. `git commit -m "inti"`
-3. Create the repo on github
-4. Add the remote
-5. `git push origin master`
-6. `git branch gh-pages`
-7. `git subtree push --prefix src origin gh-pages`
-8. Profit
-
-## As you work
-
-1. `git add -A`
-2. `git commit -m "Enter A BETTER MESSAGE"`
-3. `git push origin master`
-4. `git subtree push --prefix src origin gh-pages`
+###### You are able to click on any date and input a task with details ranging from a description, to when the task needs to be completed. Once Created, you can drag that task to other dates if you aren't able to complete it. Once the task is completed, you can click on that task, and a modal will drop down showing you all of the specific data about that task!
